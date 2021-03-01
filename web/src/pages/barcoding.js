@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
+import ProjectInfo from '../components/ProjectInfo';
 import Video from '../components/Video'
 
 const HeroStyle = styled.div`
@@ -50,33 +51,6 @@ const BarGrid = styled.div`
   }
 `;
 
-const DetailStyle = styled.div`
-  ${tw`container flex flex-col lg:flex-row flex-auto justify-between mb-24`};
-  .portfolio-name {
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 75px;
-    color: #2e444f;
-    margin-right: 50px;
-  }
-  p {
-    font-size: 22px;
-    width: 820px;
-    max-width: 100%;
-    margin-top: 12px;
-    font-weight: 300;
-  }
-
-  @media screen and (max-width: 500px) {
-    .portfolio-name {
-      font-size: 42px;
-    }
-    .detail-info {
-      width: 300px;
-    }
-  }
-`;
-
 const BottomStyle = styled.div`
   ${tw`container flex flex-auto justify-between`};
   .tape,
@@ -99,6 +73,14 @@ const ShirtStyle = styled.div`
     width: 50%;
   }
 `;
+
+
+const content = {
+  detail: {
+    name: 'Barcoding',
+    info: 'As the technology behind supply chain changes, Barcoding wanted to keep focus on its namesake and founding technology. The brand had tosustain its equity while showing the world that it has not only grown up, but that it drives innovation in the industry. We helped Barcoding evolve in the face of a major technological shift and gave them an identity system with a foundation built to withstand and thrive in changing times.'
+  },
+};
 
 export default function BarcodingPage({ data }) {
   const {
@@ -132,21 +114,7 @@ export default function BarcodingPage({ data }) {
           className="welcome"
         />
       </ImgFlex>
-      <DetailStyle>
-        <h1 className="portfolio-name">Barcoding</h1>
-        <p className="detail-info">
-          As the technology behind supply chain changes, Barcoding wanted to
-          keep focus on its namesake and founding technology. The brand had to
-          sustain its equity while showing the world that it has not only grown
-          up, but that it drives innovation in the industry. We helped Barcoding
-          evolve in the face of a major technological shift and gave them an
-          identity system with a foundation built to withstand and thrive in
-          changing times.
-          <br />
-          <br />
-          <i>Read more</i>
-        </p>
-      </DetailStyle>
+      <ProjectInfo name={content.detail.name} info={content.detail.info} />
       <BarGrid>
         <Img
           className="item-a"
@@ -335,3 +303,8 @@ export const query = graphql`
     }
   }
 `;
+
+
+
+
+
