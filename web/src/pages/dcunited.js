@@ -43,11 +43,13 @@ const content = {
   info: 'D.C. United was prepping to start the 2018 season in their new home at Audi Field. Inspired by the excitement of the fans who were counting down until the first kickoff, we built a digital experience that brought the in-person experience to the web. Using the group energy of game day as our muse, we incorporated on-page animations, countdown timers, and fly-through videos to make the web experience feel alive. The result is a captivating website that blends the brand identities of Audi and D.C. United in a clean, minimalistic design.'
 }
 
+// todo: when componetizing these case studies we'll need to make sure to only use margin-bottom/padding-bottom to maintain consistent vertical rhythm
+
 export default function DcunitedPage({ data }) {
   const { middle, dchero, bottom } = data;
   return (
     <Layout isCaseStudy>
-      <Img fluid={dchero.childImageSharp.fluid} alt="one" />
+      <Img fluid={dchero.childImageSharp.fluid} alt="one" style={{marginBottom: '4rem'}}/>
       <ProjectInfo content={content} />
       <ImgFlex>
         <Img fluid={middle.childImageSharp.fluid} alt="three" />
