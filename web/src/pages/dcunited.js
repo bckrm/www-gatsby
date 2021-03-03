@@ -47,7 +47,7 @@ export default function DcunitedPage({ data }) {
   const { middle, dchero, bottom } = data;
   return (
     <Layout isCaseStudy>
-      <Img fluid={dchero.childImageSharp.fluid} alt="one" />
+      <Img fluid={dchero.childImageSharp.fluid} alt="one" style={{marginBottom: '4rem'}}/>
       <ProjectInfo content={content} />
       <ImgFlex>
         <Img fluid={middle.childImageSharp.fluid} alt="three" />
