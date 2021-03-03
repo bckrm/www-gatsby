@@ -15,7 +15,8 @@ const StyledBody = styled.p`
   ${tw`lg:w-2/3 text-2xl`}
 `;
 
-export default function ProjectInfo({ name, info }) {
+export default function ProjectInfo({ content }) {
+  const { info, name } = content;
   return (
     <ProjectWrapper>
       <StyledHeading>{name}</StyledHeading>
