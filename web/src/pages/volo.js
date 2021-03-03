@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
+import ProjectInfo from '../components/ProjectInfo';
 
 const HeroStyle = styled.div`
   margin-bottom: 100px;
@@ -65,6 +66,11 @@ export default function VoloPage({ data }) {
     budlight,
   } = data;
 
+  const content = {
+    name: 'Volo City',
+    info: 'Volo City is a national sports league that had different brand names for each city’s adult leagues, and a separate non profit kid’s organization. We unified the cities and non profit under one cohesive brand, whose namesake was inspired by the style of bocce that was played in the first league. Volo means to fly in Italian, and together with each city they create velocity. The name and visual identity system represents Volo’s mission to uplift communities, build relationships, and celebrate the culture of their cities.'
+  }
+
   return (
     <Layout hasFooter isCaseStudy>
       <HeroStyle>
@@ -74,22 +80,7 @@ export default function VoloPage({ data }) {
         <Img fluid={glasses.childImageSharp.fluid} alt="glasses" />
         <Img fluid={budlight.childImageSharp.fluid} alt="budlightbowl" />
       </ImgStyle>
-      <DetailStyle>
-        <h1 className="portfolio-name">Volo City</h1>
-        <p>
-          Volo City is a national sports league that had different brand names
-          for each city’s adult leagues, and a separate non profit kid’s
-          organization. We unified the cities and non profit under one cohesive
-          brand, whose namesake was inspired by the style of bocce that was
-          played in the first league. Volo means to fly in Italian, and together
-          with each city they create velocity. The name and visual identity
-          system represents Volo’s mission to uplift communities, build
-          relationships, and celebrate the culture of their cities.
-          <br />
-          <br />
-          <i>Read more</i>
-        </p>
-      </DetailStyle>
+      <ProjectInfo content={content} />
       <GridStyle>
         <Img
           className="ombre"

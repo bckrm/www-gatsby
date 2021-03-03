@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
+import ProjectInfo from '../components/ProjectInfo'
 
 const DetailStyle = styled.div`
   ${tw`container flex flex-col lg:flex-row flex-auto justify-between mb-24`};
@@ -37,27 +38,17 @@ const ImgFlex = styled.div`
   margin-left: 75px;
 `;
 
+const content = {
+  name: 'DC United',
+  info: 'D.C. United was prepping to start the 2018 season in their new home at Audi Field. Inspired by the excitement of the fans who were counting down until the first kickoff, we built a digital experience that brought the in-person experience to the web. Using the group energy of game day as our muse, we incorporated on-page animations, countdown timers, and fly-through videos to make the web experience feel alive. The result is a captivating website that blends the brand identities of Audi and D.C. United in a clean, minimalistic design.'
+}
+
 export default function DcunitedPage({ data }) {
   const { middle, dchero, bottom } = data;
   return (
     <Layout isCaseStudy>
       <Img fluid={dchero.childImageSharp.fluid} alt="one" />
-      <DetailStyle>
-        <h1 className="portfolio-name">DC United</h1>
-        <p>
-          D.C. United was prepping to start the 2018 season in their new home at
-          Audi Field. Inspired by the excitement of the fans who were counting
-          down until the first kickoff, we built a digital experience that
-          brought the in-person experience to the web. Using the group energy of
-          game day as our muse, we incorporated on-page animations, countdown
-          timers, and fly-through videos to make the web experience feel alive.
-          The result is a captivating website that blends the brand identities
-          of Audi and D.C. United in a clean, minimalistic design.
-          <br />
-          <br />
-          <i>Read more</i>
-        </p>
-      </DetailStyle>
+      <ProjectInfo content={content} />
       <ImgFlex>
         <Img fluid={middle.childImageSharp.fluid} alt="three" />
         <Img fluid={bottom.childImageSharp.fluid} alt="two" />
