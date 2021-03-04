@@ -34,6 +34,7 @@ const P = styled.p`
 // `;
 
 const StyledHeading = styled.h1`
+  ${tw`mt-20 mb-5`}
   padding: ${props => (props.isTitle ? `4rem 1rem rem` : `0`)};
 `;
 
