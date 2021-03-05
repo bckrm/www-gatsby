@@ -12,7 +12,7 @@ import TeamSection from '../components/TeamSection';
 // import TestimonialSection from '../components/TestimonialSection';
 
 export const query = graphql`
-    query AboutQuery {
+    query InfoQuery {
         heroImage: file(relativePath: {regex: "/info-hero/"}) {
             childImageSharp {
                 fluid(maxWidth: 900) {
@@ -42,7 +42,7 @@ export const query = graphql`
     } 
 `
 
-export default function AboutPage(props) {
+export default function InfoPage(props) {
     const {
         data: {
             heroImage,
@@ -56,7 +56,7 @@ export default function AboutPage(props) {
     return (
         <>
             <Layout hasFooter hasBgColorTransition>
-                <SEO title="About" />
+                <SEO title="Info" />
                 <Hero heading={content.heroSection.heading} image={heroImage}/>
                 <ServiceSection
                     heading={content.serviceSection.heading}

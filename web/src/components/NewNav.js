@@ -38,7 +38,7 @@ export default function NewNav ({ isCaseStudy }) {
     const menu = [
         {
           name: 'Info',
-          link: 'about',
+          link: 'info',
         },
         // {
         //   name: 'Case Studies',
