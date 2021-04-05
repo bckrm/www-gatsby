@@ -5,6 +5,7 @@ import tw from 'twin.macro';
 import { CgArrowLongRight as Icon } from 'react-icons/cg'
 
 import MarkAbbrWithAccent from './svgs/mark-abbr-with-accent';
+import IndexLineAnimation from './indexLineAnimation';
 
 const Section = styled.section`
     ${tw``}
@@ -45,7 +46,8 @@ export default function IndexFeatureSection ({ images }) {
         <Section>
             <Grid>
                 <MarkWrapper>
-                    <MarkAbbrWithAccent />
+                    {/* <MarkAbbrWithAccent /> */}
+                    <IndexLineAnimation />
                 </MarkWrapper>
                 <ImageOne>
                     <Img fluid={featureImage.childImageSharp.fluid} style={{maxWidth: `100%`}} />
@@ -56,7 +58,7 @@ export default function IndexFeatureSection ({ images }) {
                     </Quote>
                     <Link href='https://technical.ly/baltimore/2019/08/15/5-questions-with-kara-redman-how-a-creative-agency-thrives-on-its-own-terms/' target="_blank" rel="noopener noreferrer">
                         5 questions with Technical.ly
-                        <Icon className={`ml-5`}/>
+                        <Icon className={`ml-5 text-brand-7`}/>
                     </Link>
                 </QuoteWrapper>
                 <ImageTwo>

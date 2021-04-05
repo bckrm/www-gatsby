@@ -27,8 +27,8 @@ const Main = styled.main`
             : !hasBgColorTransition
             ? 'var(--brand-2)'
             : isBgTransitioned
-            ? 'var(--brand-1)'
-            : 'var(--brand-2)'
+            ? 'var(--white)'
+            : 'var(--brand-1)'
     )}
 `;
 export default function Layout ({ hasBgColorTransition, children, darkTheme, hasFooter, isCaseStudy }) {

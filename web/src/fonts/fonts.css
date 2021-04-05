@@ -117,3 +117,24 @@
     font-style: normal;
     src: url('Connary-Fagen-Quincy-CF-Thin.otf') format('OpenType')
 }
+
+@font-face {
+    font-family: "Galano Grotesque";
+    font-weight: 400;
+    font-style: normal;
+    src: url('GalanoGrotesque-Regular.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    font-weight: 900;
+    font-style: normal;
+    src: url('GalanoGrotesque-Bold.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    font-weight: 400;
+    font-style: italic;
+    src: url('GalanoGrotesque-Italic.otf') format('OpenType');
+}
