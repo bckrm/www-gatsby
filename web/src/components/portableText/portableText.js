@@ -1,14 +1,15 @@
-import React from 'react'
-import BasePortableText from '@sanity/block-content-to-react'
-import serializers from './serializers'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import BasePortableText from '@sanity/block-content-to-react';
+import serializers from './serializers';
 
-const PortableText = ({blocks}) => (
+const PortableText = ({ blocks }) => (
     <BasePortableText
         blocks={blocks}
         serializers={serializers}
-        projectId='stqzzq3s'
-        dataset='production'
+        projectId="stqzzq3s"
+        dataset="production"
     />
-)
+);
 
-export default PortableText
+export default PortableText;

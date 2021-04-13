@@ -1,5 +1,7 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+/* eslint-disable no-use-before-define */
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { graphql } from 'gatsby';
 // import Img from 'gatsby-image'
 
 import Contact from '../components/Contact';
@@ -13,13 +15,13 @@ import TeamSection from '../components/TeamSection';
 
 export const query = graphql`
     query InfoQuery {
-        heroImage: file(relativePath: {regex: "/info-hero/"}) {
+        heroImage: file(relativePath: { regex: "/info-hero/" }) {
             childImageSharp {
                 fluid(maxWidth: 900) {
                     ...GatsbyImageSharpFluid
                 }
             }
-        } 
+        }
         sanityInfoPage {
             team {
                 id
@@ -39,25 +41,22 @@ export const query = graphql`
                 id
             }
         }
-    } 
-`
+    }
+`;
 
 export default function InfoPage(props) {
     const {
         data: {
             heroImage,
-            sanityInfoPage: {
-                team,
-                services,
-            },
-        }
-    } = props
+            sanityInfoPage: { team, services },
+        },
+    } = props;
 
     return (
         <>
             <Layout hasFooter hasBgColorTransition>
                 <SEO title="Info" />
-                <Hero heading={content.heroSection.heading} image={heroImage}/>
+                <Hero heading={content.heroSection.heading} image={heroImage} />
                 <ServiceSection
                     heading={content.serviceSection.heading}
                     services={services}
@@ -73,7 +72,7 @@ export default function InfoPage(props) {
                 <Contact />
             </Layout>
         </>
-    )
+    );
 }
 
 const content = {
@@ -143,7 +142,7 @@ const content = {
                     'customer definition',
                 ],
             },
-        ]
+        ],
     },
     teamSection: {
         heading: 'the team',
@@ -184,33 +183,33 @@ const content = {
                 name: 'Vassillis Terzopoulos',
                 title: 'Web Developer',
             },
-        ]
+        ],
     },
     testimonialSection: {
         testimonials: [
             {
                 quote: 'Backroom did amazing things for us!',
-                source: 'Testimonial person'
+                source: 'Testimonial person',
             },
             {
                 quote: 'Backroom did amazing things for us!',
-                source: 'Testimonial person'
+                source: 'Testimonial person',
             },
             {
                 quote: 'Backroom did amazing things for us!',
-                source: 'Testimonial person'
+                source: 'Testimonial person',
             },
             {
                 quote: 'Backroom did amazing things for us!',
-                source: 'Testimonial person'
+                source: 'Testimonial person',
             },
             {
                 quote: 'Backroom did amazing things for us!',
-                source: 'Testimonial person'
+                source: 'Testimonial person',
             },
-        ]
+        ],
     },
     valuesSection: {
         heading: 'Our shared values drive every decision we make',
     },
-}
+};

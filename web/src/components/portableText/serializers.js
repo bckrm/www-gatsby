@@ -1,7 +1,8 @@
 // import React from 'react'
-import BasicImage from '../case-studies/BasicImage'
-import CaseStudyContent from '../case-studies/CaseStudyContent'
-import FullBleedImg from '../case-studies/FullBleedImg'
+import BasicImage from '../case-studies/BasicImage';
+import CaseStudyContent from '../case-studies/CaseStudyContent';
+import FullBleedImg from '../case-studies/FullBleedImg';
+
 export default {
     types: {
         caseStudyFullBleedImage: FullBleedImg,
@@ -12,4 +13,4 @@ export default {
         // caseStudyFeaturedImage: ({ node }) => <pre>{JSON.stringify(node, null, 2)}</pre>,
         // caseStudyTextBlock: ({ node }) => <pre>{JSON.stringify(node, null, 2)}</pre>
     },
-}
+};

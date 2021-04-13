@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable react/prop-types */
 /**
  * Layout component that queries for data
  * with Gatsby's StaticQuery component
@@ -5,10 +7,10 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 // import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 
 import styled from 'styled-components';
 import tw from 'twin.macro';
@@ -16,30 +18,39 @@ import tw from 'twin.macro';
 // import NavModal from './NavModal'
 // import Header from './Header'
 // import './layout.css'
-import NewNav from './NewNav'
+import NewNav from './NewNav';
 import Footer from './footer';
 
 const Main = styled.main`
     ${tw`transition duration-1000`}
-    background-color: ${({ hasBgColorTransition, isBgTransitioned, isCaseStudy }) => (
+    background-color: ${({
+        hasBgColorTransition,
+        isBgTransitioned,
+        isCaseStudy,
+    }) =>
         isCaseStudy
             ? 'var(--white)'
             : !hasBgColorTransition
             ? 'var(--brand-2)'
             : isBgTransitioned
             ? 'var(--brand-1)'
-            : 'var(--brand-2)'
-    )}
+            : 'var(--brand-2)'}
 `;
-export default function Layout ({ hasBgColorTransition, children, darkTheme, hasFooter, isCaseStudy }) {
+export default function Layout({
+    hasBgColorTransition,
+    children,
+    darkTheme,
+    hasFooter,
+    isCaseStudy,
+}) {
     const main = useRef();
-    const [isBgTransitioned, setisBgTransitioned] = useState(false)
+    const [isBgTransitioned, setisBgTransitioned] = useState(false);
 
     const handleScroll = () => {
         const elHeight = main.current.clientHeight;
         const scrollPosition = window.scrollY;
 
-        if (scrollPosition > elHeight * .45) {
+        if (scrollPosition > elHeight * 0.45) {
             setisBgTransitioned(true);
         } else {
             setisBgTransitioned(false);
@@ -51,8 +62,8 @@ export default function Layout ({ hasBgColorTransition, children, darkTheme, has
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-        }
-    })
+        };
+    });
     return (
         <StaticQuery
             query={graphql`
@@ -64,7 +75,7 @@ export default function Layout ({ hasBgColorTransition, children, darkTheme, has
                     }
                 }
             `}
-            render={data => (
+            render={() => (
                 <>
                     <NewNav darkTheme={darkTheme} isCaseStudy={isCaseStudy} />
                     <Main
@@ -75,15 +86,13 @@ export default function Layout ({ hasBgColorTransition, children, darkTheme, has
                     >
                         {children}
                     </Main>
-                    {hasFooter &&
-                        <Footer />
-                    }
+                    {hasFooter && <Footer />}
                 </>
             )}
         />
-    )
+    );
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+    children: PropTypes.node.isRequired,
+};
