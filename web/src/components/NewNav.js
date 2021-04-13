@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 // import { useState } from 'react'
 import { Link } from 'gatsby';
@@ -6,14 +7,15 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import Mark from './svgs/mark';
-import MarkAbbr from './svgs/mark-abbr'
+import MarkAbbr from './svgs/mark-abbr';
 // import NewHamburger from '../components/NewHamburger';
 
 const StyledNav = styled.nav`
     ${tw`fixed py-4 md:py-8 top-0 w-full z-10`}
 
-    background-color: ${({ isCaseStudy }) => isCaseStudy ? 'var(--white)' : 'var(--brand-2)'}
-`
+    background-color: ${({ isCaseStudy }) =>
+        isCaseStudy ? 'var(--white)' : 'var(--brand-2)'}
+`;
 
 const DesktopMarkWrapper = styled.div`
     ${tw`hidden sm:block`}
@@ -29,16 +31,15 @@ const NavInner = styled.div`
 
 const StyledLink = styled(Link)`
     ${tw`block mt-4 ml-8 text-right md:inline-block md:mt-0 text-3xl leading-10`}
+`;
 
-`
-
-export default function NewNav ({ isCaseStudy }) {
+export default function NewNav({ isCaseStudy }) {
     // const [navOpen, setNavOpen] = useState(false)
 
     const menu = [
         {
-          name: 'Info',
-          link: 'info',
+            name: 'Info',
+            link: 'info',
         },
         // {
         //   name: 'Case Studies',
@@ -59,17 +60,17 @@ export default function NewNav ({ isCaseStudy }) {
         //   ],
         // },
         {
-          name: 'Contact',
-          link: 'contact',
+            name: 'Contact',
+            link: 'contact',
         },
-      ];
+    ];
 
     // const handleClick = () => setNavOpen(!navOpen)
 
     return (
         <StyledNav isCaseStudy={isCaseStudy}>
             <NavInner>
-                <Link to='/'>
+                <Link to="/">
                     <DesktopMarkWrapper>
                         <Mark />
                     </DesktopMarkWrapper>
@@ -77,20 +78,20 @@ export default function NewNav ({ isCaseStudy }) {
                         <MarkAbbr />
                     </MobileMarkWrapper>
                 </Link>
-                <div class="justify-end md:flex md:items-center md:w-auto">
-                    {menu.map((item, index) => {
+                <div className="justify-end md:flex md:items-center md:w-auto">
+                    {menu.map((item) => {
                         return (
                             <StyledLink
-                                activeClassName='font-bold pointer-events-none'
+                                activeClassName="font-bold pointer-events-none"
                                 to={item.link}
                                 key={item.name}
                             >
                                 {item.name}
                             </StyledLink>
-                        )
+                        );
                     })}
                 </div>
             </NavInner>
         </StyledNav>
-    )
+    );
 }

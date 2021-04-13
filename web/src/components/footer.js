@@ -42,7 +42,7 @@ const nav = [
         text: 'contact',
         link: '/contact',
     },
-]
+];
 
 const social = [
     {
@@ -61,14 +61,14 @@ const social = [
         text: 'github',
         link: 'https://github.com/bckrm',
     },
-] 
+];
 
-export default function Footer () {
+export default function Footer() {
     return (
         <StyledFooter>
             <Grid>
                 <Nav>
-                    <NavInner> 
+                    <NavInner>
                         <MarkLink to="/">
                             <MarkAbbr />
                         </MarkLink>
@@ -78,7 +78,7 @@ export default function Footer () {
                                     <LI>
                                         <Link to={item.link}>{item.text}</Link>
                                     </LI>
-                                )
+                                );
                             })}
                         </UL>
                     </NavInner>
@@ -86,13 +86,19 @@ export default function Footer () {
                         {social.map((item) => {
                             return (
                                 <LI>
-                                    <a href={item.link} target="_blank" rel="noopener noreferrer">{item.text}</a>
+                                    <a
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {item.text}
+                                    </a>
                                 </LI>
-                            )
+                            );
                         })}
                     </UL>
                 </Nav>
             </Grid>
         </StyledFooter>
-    )
+    );
 }
