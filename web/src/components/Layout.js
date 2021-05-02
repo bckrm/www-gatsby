@@ -34,10 +34,12 @@ const Main = styled.main`
             ? 'var(--brand-2)'
             : isBgTransitioned
             ? 'var(--brand-1)'
-            : 'var(--brand-2)'}
+            : 'var(--brand-2)'};
+    padding-top: ${({ hasTopPadding }) => (hasTopPadding ? '148px' : '0px')};
 `;
 export default function Layout({
     hasBgColorTransition,
+    hasTopPadding,
     children,
     darkTheme,
     hasFooter,
@@ -79,6 +81,7 @@ export default function Layout({
                 <>
                     <NewNav darkTheme={darkTheme} isCaseStudy={isCaseStudy} />
                     <Main
+                        hasTopPadding={hasTopPadding}
                         hasBgColorTransition={hasBgColorTransition}
                         isBgTransitioned={isBgTransitioned}
                         isCaseStudy={isCaseStudy}

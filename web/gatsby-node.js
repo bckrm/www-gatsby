@@ -7,41 +7,39 @@
 // You can delete this file if you're not using it
 
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
-  
+    const { createPage } = actions;
+
     const result = await graphql(`
         {
             allSanityCaseStudy {
                 edges {
                     node {
-                        Slug {
+                        slug {
                             current
                         }
                         id
                     }
                 }
-            } 
+            }
         }
-    `)
-  
+    `);
+
     if (result.errors) {
-        throw result.errors
+        throw result.errors;
     }
-  
-    const caseStudies = result.data.allSanityCaseStudy.edges || []
 
-    caseStudies.forEach((edge, index) => {
-        const path = `/case-studies/${edge.node.Slug.current}`
+    const caseStudies = result.data.allSanityCaseStudy.edges || [];
 
-        console.log(`page created at ${path}`)
-  
+    caseStudies.forEach((edge) => {
+        const path = `/work/${edge.node.slug.current}`;
+
         createPage({
             path,
-            component: require.resolve("./src/templates/case-study.js"),
+            component: require.resolve('./src/templates/case-study.js'),
             context: {
-                slug: edge.node.Slug.current,
+                slug: edge.node.slug.current,
                 id: edge.node.id,
             },
-        })
-    })
-}
+        });
+    });
+};
