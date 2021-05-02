@@ -1,5 +1,6 @@
 module.exports = {
     purge: ['./src/**/*.js', './src/**/*.jsx'],
+    darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
             colors: {
@@ -14,7 +15,7 @@ module.exports = {
                 'brand-9': '#1F2A48',
             },
             gridTemplateRows: {
-                '10': 'repeat(10, minmax(0, 1fr))',
+                10: 'repeat(10, minmax(0, 1fr))',
             },
         },
         container: (theme) => ({
@@ -24,4 +25,4 @@ module.exports = {
     },
     variants: {},
     plugins: [],
-}
+};
