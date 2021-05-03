@@ -43,7 +43,7 @@ export default function IndexHero({ images }) {
                     Backroom is an independent, full service brand strategy &
                     activation agency.
                 </Heading>
-                <ImageOne to="/barcoding">
+                <ImageOne to="/work/barcoding">
                     <Img fluid={images[0].childImageSharp.fluid} />
                     <StyledP>
                         We collaborated with the Barcoding team to define a
@@ -56,7 +56,7 @@ export default function IndexHero({ images }) {
                     </StyledP>
                 </ImageOne>
 
-                <ImageTwo to="/volo">
+                <ImageTwo to="/work/volo">
                     <Img fluid={images[1].childImageSharp.fluid} />
                     <StyledP>
                         We partnered with Volo City, a national brand that
@@ -68,7 +68,7 @@ export default function IndexHero({ images }) {
                     </StyledP>
                 </ImageTwo>
 
-                <ImageThree to="/dcunited">
+                <ImageThree to="/work/dcunited">
                     <Img fluid={images[2].childImageSharp.fluid} />
                     <StyledP>
                         With a month before go-time, our team designed and

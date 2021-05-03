@@ -38,6 +38,10 @@ export default function NewNav({ isCaseStudy }) {
 
     const menu = [
         {
+            name: 'Work',
+            link: 'work',
+        },
+        {
             name: 'Info',
             link: 'info',
         },

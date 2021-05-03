@@ -7,12 +7,14 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // document types
 import caseStudy from './documents/caseStudy';
+import caseStudyPreview from './documents/caseStudyPreview';
 import homepagehero from './documents/homepageHero';
 import indexPage from './documents/indexPage';
 import infoPage from './documents/infoPage';
 import post from './documents/post';
 import service from './documents/service';
 import team from './documents/team';
+import workIndexPage from './documents/workIndexPage';
 
 // object types
 import caseStudyFullBleedImage from './objects/caseStudyFullBleedImage';
@@ -41,6 +43,7 @@ export default createSchema({
         caseStudyFullBleedImage,
         caseStudyBodyPortableText,
         caseStudyFeaturedImage,
+        caseStudyPreview,
         caseStudyTextBlock,
         homepagehero,
         indexPage,
@@ -48,6 +51,7 @@ export default createSchema({
         post,
         service,
         team,
+        workIndexPage,
 
         // objects
         description,
