@@ -71,7 +71,6 @@ export default class Header extends Component {
 
         if (yPos > 0) {
             if (this.state.isScrolled !== true) {
-                console.log('state changed');
                 this.setState({ isScrolled: true });
             }
         } else {

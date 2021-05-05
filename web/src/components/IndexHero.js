@@ -5,42 +5,45 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { Link } from 'gatsby';
-import SandDrop from './svgs/sandDrop';
 
 const StyledSection = styled.section`
-    ${tw`min-h-screen pb-10 pt-40 relative`}
+    ${tw`min-h-screen pb-10 pt-40`}
 `;
 
 const StyledGrid = styled.div`
-    ${tw`container grid md:grid-cols-12 md:auto-rows-min md:gap-y-5 md:mx-auto md:mt-20 md:gap-x-2 text-brand-9 relative`}
+    ${tw`container grid md:grid-cols-12 md:auto-rows-min md:gap-y-5 md:mx-auto md:mt-20 md:gap-x-2 text-brand-9`}
 `;
 
 const Heading = styled.h1`
     ${tw`text-4xl lg:text-5xl lg:leading-tight mb-8 md:col-start-7 md:col-end-12`}
 `;
 
+const ImageOne = styled(Link)`
+    ${tw`col-start-1 md:col-end-6 md:row-start-1`}
+`;
+
+const ImageTwo = styled(Link)`
+    ${tw`md:col-start-7 md:col-end-12 md:row-start-2 md:-mt-40`}
+`;
+
+const ImageThree = styled(Link)`
+    ${tw`md:col-span-7 md:row-start-3`}
+`;
+
 const StyledP = styled.p`
-    ${tw`text-xl mt-5`}
+    ${tw`text-2xl mt-5`}
 `;
 
 export default function IndexHero({ images }) {
     return (
         <StyledSection>
-            <SandDrop />
             <StyledGrid>
                 <Heading>
                     Backroom is an independent, full service brand strategy &
                     activation agency.
                 </Heading>
-                <Link
-                    className="col-start-1 md:col-end-6 md:row-start-1"
-                    to="/barcoding"
-                >
-                    <Img
-                        className="mb-6"
-                        fluid={images[0].childImageSharp.fluid}
-                    />
-                    <h2 className="text-brand-7">Barcoding</h2>
+                <ImageOne to="/work/barcoding">
+                    <Img fluid={images[0].childImageSharp.fluid} />
                     <StyledP>
                         We collaborated with the Barcoding team to define a
                         brand architecture and positioning that moved them
@@ -50,17 +53,10 @@ export default function IndexHero({ images }) {
                         away from the barcode, while giving a nod to their
                         original namesake with an elevated wordmark.
                     </StyledP>
-                </Link>
+                </ImageOne>
 
-                <Link
-                    className="md:col-start-7 md:col-end-12 md:row-start-2 md:mt-[-26rem]"
-                    to="/volo"
-                >
-                    <Img
-                        className="mb-6"
-                        fluid={images[1].childImageSharp.fluid}
-                    />
-                    <h2 className="text-brand-7">Volo City</h2>
+                <ImageTwo to="/work/volo-city">
+                    <Img fluid={images[1].childImageSharp.fluid} />
                     <StyledP>
                         We partnered with Volo City, a national brand that
                         strengthens communities and impacts economic health
@@ -69,14 +65,10 @@ export default function IndexHero({ images }) {
                         by the style of bocce that was played in their very
                         first league.
                     </StyledP>
-                </Link>
+                </ImageTwo>
 
-                <Link className="md:col-span-7 md:row-start-3" to="/dcunited">
-                    <Img
-                        className="mb-6"
-                        fluid={images[2].childImageSharp.fluid}
-                    />
-                    <h2 className="text-brand-7">D.C. United</h2>
+                <ImageThree to="/work/dc-united">
+                    <Img fluid={images[2].childImageSharp.fluid} />
                     <StyledP>
                         With a month before go-time, our team designed and
                         launched a co-branded website to support the launch of
@@ -85,7 +77,7 @@ export default function IndexHero({ images }) {
                         game day in a digital space, with fly-through videos and
                         a countdown timer to keep fans charged up.
                     </StyledP>
-                </Link>
+                </ImageThree>
             </StyledGrid>
         </StyledSection>
     );

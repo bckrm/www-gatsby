@@ -1,4 +1,4 @@
-import S from '@sanity/desk-tool/structure-builder'
+import S from '@sanity/desk-tool/structure-builder';
 
 export default () =>
     S.list()
@@ -7,9 +7,17 @@ export default () =>
             S.listItem()
                 .title('Info Page')
                 .child(
-                    S.editor()
-                        .schemaType('infoPage')
-                        .documentId('infoPage')
+                    S.editor().schemaType('infoPage').documentId('infoPage'),
                 ),
-            ...S.documentTypeListItems().filter(listItem => !['infoPage'].includes(listItem.getId()))
-        ])
+            S.listItem()
+                .title('Work Page')
+                .child(
+                    S.editor()
+                        .schemaType('workIndexPage')
+                        .documentId('workIndexPage'),
+                ),
+            ...S.documentTypeListItems().filter(
+                (listItem) =>
+                    !['infoPage', 'workIndexPage'].includes(listItem.getId()),
+            ),
+        ]);
