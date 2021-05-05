@@ -15,10 +15,10 @@ const StyledNav = styled.nav`
     ${tw`fixed py-4 md:py-8 top-0 w-full z-10`}
 
     background-color: ${({ isCaseStudy, isPageScrolled }) =>
-        isCaseStudy && isPageScrolled
-            ? 'var(--white)'
-            : isCaseStudy && !isPageScrolled
-            ? 'transparent'
+        // isCaseStudy && isPageScrolled
+        // ? 'var(--white)'
+        isCaseStudy
+            ? '#ffffff'
             : isPageScrolled
             ? 'var(--brand-1)'
             : 'transparent'};
