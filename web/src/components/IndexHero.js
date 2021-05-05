@@ -55,7 +55,7 @@ export default function IndexHero({ images }) {
                     </StyledP>
                 </ImageOne>
 
-                <ImageTwo to="/work/volo">
+                <ImageTwo to="/work/volo-city">
                     <Img fluid={images[1].childImageSharp.fluid} />
                     <StyledP>
                         We partnered with Volo City, a national brand that
@@ -67,7 +67,7 @@ export default function IndexHero({ images }) {
                     </StyledP>
                 </ImageTwo>
 
-                <ImageThree to="/work/dcunited">
+                <ImageThree to="/work/dc-united">
                     <Img fluid={images[2].childImageSharp.fluid} />
                     <StyledP>
                         With a month before go-time, our team designed and
