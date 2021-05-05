@@ -1,22 +1,33 @@
+/* eslint-disable import/no-unresolved */
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // document types
-import caseStudy from './documents/caseStudy'
-import homepagehero from './documents/homepageHero'
-import infoPage from './documents/infoPage'
-import post from './documents/post'
-import service from './documents/service'
-import team from './documents/team'
+import caseStudy from './documents/caseStudy';
+import homepagehero from './documents/homepageHero';
+import indexPage from './documents/indexPage';
+import infoPage from './documents/infoPage';
+import post from './documents/post';
+import service from './documents/service';
+import team from './documents/team';
 
 // object types
-import caseStudyFullBleedImage from './objects/caseStudyFullBleedImage'
-import caseStudyBodyPortableText from './objects/caseStudyBodyPortableText'
-import caseStudyFeaturedImage from './objects/caseStudyFeaturedImage'
-import caseStudyTextBlock from './objects/caseStudyTextBlock'
+import caseStudyFullBleedImage from './objects/caseStudyFullBleedImage';
+import caseStudyBodyPortableText from './objects/caseStudyBodyPortableText';
+import caseStudyFeaturedImage from './objects/caseStudyFeaturedImage';
+import caseStudyTextBlock from './objects/caseStudyTextBlock';
+import description from './objects/case-study/description';
+import featuredContent from './objects/case-study/featuredContent';
+import fullWidthImage from './objects/case-study/fullWidthImage';
+import imageCol2 from './objects/case-study/imageCol2';
+import imageGridTallLeft from './objects/case-study/imageGridTallLeft';
+import imageObj from './objects/image';
+import twoColLargeRightImage from './objects/case-study/2colLgRightImage';
+import twoColWithVideo from './objects/case-study/2colWithVideo';
+import video from './objects/case-study/video';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,9 +43,21 @@ export default createSchema({
         caseStudyFeaturedImage,
         caseStudyTextBlock,
         homepagehero,
+        indexPage,
         infoPage,
         post,
         service,
         team,
-    ])
-})
+
+        // objects
+        description,
+        featuredContent,
+        fullWidthImage,
+        imageCol2,
+        imageGridTallLeft,
+        imageObj,
+        twoColLargeRightImage,
+        twoColWithVideo,
+        video,
+    ]),
+});

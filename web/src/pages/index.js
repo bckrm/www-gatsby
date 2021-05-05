@@ -1,4 +1,4 @@
-
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -11,7 +11,7 @@ import IndexHero from '../components/IndexHero';
 import IndexFeatureSection from '../components/IndexFeatureSection';
 import IndexPressSection from '../components/IndexPressSection';
 
-export default function Index ({ data }) {
+export default function Index({ data }) {
     const {
         barcoding,
         chylene,
@@ -20,21 +20,21 @@ export default function Index ({ data }) {
         dcu,
         leslie,
         volo,
-    } = data
+    } = data;
 
-    const images = [barcoding, volo, dcu]
+    const images = [barcoding, volo, dcu];
 
-  return (
-    <Layout hasFooter hasBgColorTransition>
-      <SEO title="Home" />
-      <IndexHero images={images} />
-      <IndexTextAnimation />
-      <IndexCTA />
-      <IndexFeatureSection images={[leslie, chylene]} />
-      <IndexPressSection />
-      <Contact />
-    </Layout>
-  );
+    return (
+        <Layout hasFooter hasBgColorTransition>
+            <SEO title="Home" />
+            <IndexHero images={images} />
+            <IndexTextAnimation />
+            <IndexCTA />
+            <IndexFeatureSection images={[leslie, chylene]} />
+            <IndexPressSection />
+            <Contact />
+        </Layout>
+    );
 }
 
 export const query = graphql`
@@ -42,7 +42,7 @@ export const query = graphql`
         chylene: file(relativePath: { regex: "/chylene/" }) {
             childImageSharp {
                 fluid(maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -50,7 +50,7 @@ export const query = graphql`
         leslie: file(relativePath: { regex: "/leslie/" }) {
             childImageSharp {
                 fluid(maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -58,44 +58,44 @@ export const query = graphql`
         featureImage: file(relativePath: { regex: "/kara/" }) {
             childImageSharp {
                 fluid(maxWidth: 450) {
-                ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid
                 }
             }
             id
         }
 
-        barcoding: file(relativePath: {eq: "subway-takeover.jpg"}) {
+        barcoding: file(relativePath: { eq: "subway-takeover.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 600) {
-                    ...GatsbyImageSharpFluid	
+                    ...GatsbyImageSharpFluid
                 }
             }
             id
-        } 
+        }
 
-        volo: file(relativePath: { regex: "/volo-hero/" }){
-            childImageSharp {	
-                fluid(maxWidth: 400) {	
-                    ...GatsbyImageSharpFluid	
-                }	
-            } 
+        volo: file(relativePath: { regex: "/volo-hero/" }) {
+            childImageSharp {
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
             id
         }
 
-        dcu: file(relativePath: { regex: "/dcu-index/" }){
-            childImageSharp {	
-                fluid(maxWidth: 600) {	
-                    ...GatsbyImageSharpFluid	
-                }	
-            } 
+        dcu: file(relativePath: { regex: "/dcu-index/" }) {
+            childImageSharp {
+                fluid(maxWidth: 600) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
             id
         }
 
-        designTeam:   file(relativePath: {eq: "design-team.jpg"}) {
+        designTeam: file(relativePath: { eq: "design-team.jpg" }) {
             id
             childImageSharp {
                 fluid {
-                    ...GatsbyImageSharpFluid	
+                    ...GatsbyImageSharpFluid
                 }
             }
         }

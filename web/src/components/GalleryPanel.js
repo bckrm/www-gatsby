@@ -1,58 +1,60 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 export default function GalleryPanel() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          source: allFile(filter: { absolutePath: { regex: "/hp-links/" } }) {
-            edges {
-              node {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 500) {
-                    ...GatsbyImageSharpFluid
-                  }
+    return (
+        <StaticQuery
+            query={graphql`
+                query {
+                    source: allFile(
+                        filter: { absolutePath: { regex: "/hp-links/" } }
+                    ) {
+                        edges {
+                            node {
+                                id
+                                childImageSharp {
+                                    fluid(maxWidth: 500) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <StyledSection>
-          <GridWrapper>
-            {data.source.edges.map(({ node }) => (
-              <li key={node.id}>
-                {/* <Link to="#"> */}
-                <Img fluid={node.childImageSharp.fluid} />
-                {/* </Link> */}
-              </li>
-            ))}
-          </GridWrapper>
-          {/* <Container>
+            `}
+            render={(data) => (
+                <StyledSection>
+                    <GridWrapper>
+                        {data.source.edges.map(({ node }) => (
+                            <li key={node.id}>
+                                {/* <Link to="#"> */}
+                                <Img fluid={node.childImageSharp.fluid} />
+                                {/* </Link> */}
+                            </li>
+                        ))}
+                    </GridWrapper>
+                    {/* <Container>
             <StyledLink to="/case-studies">See our work</StyledLink>
           </Container> */}
-        </StyledSection>
-      )}
-    />
-  );
+                </StyledSection>
+            )}
+        />
+    );
 }
 
 const StyledSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
 `;
 
 const GridWrapper = styled.ul`
-  // display: flex;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    // display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 `;
 
 // const Container = styled.div`

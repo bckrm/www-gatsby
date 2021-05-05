@@ -12,21 +12,14 @@ export default {
         {
             name: 'slug',
             type: 'slug',
-            name: 'Slug',
             options: {
                 source: 'title',
             },
         },
         {
-            name: 'heroBody',
-            type: 'text',
-            title: 'Hero Body',
-            description: 'Brief intro',
-        },
-        {
-            name: 'heroBgImg',
-            type: 'image',
-            title: 'Hero Background Image',
+            name: 'featuredContent',
+            title: 'Featured Content',
+            type: 'featuredContent',
         },
         {
             name: 'body',
@@ -34,4 +27,4 @@ export default {
             title: 'Body',
         },
     ],
-}
+};
