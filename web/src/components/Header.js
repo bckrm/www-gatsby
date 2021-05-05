@@ -1,3 +1,4 @@
+/* eslint-disable react/sort-comp */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/prop-types */
 /* eslint-disable camelcase */
@@ -70,7 +71,6 @@ export default class Header extends Component {
 
         if (yPos > 0) {
             if (this.state.isScrolled !== true) {
-                console.log('state changed');
                 this.setState({ isScrolled: true });
             }
         } else {

@@ -48,15 +48,11 @@ export default function ContactPage() {
                 <Panel isTitle="true" header={header} body={body} />
                 <StyledGrid>
                     <div>
-                        <StyledHeader>general inquiries</StyledHeader>
+                        <StyledHeader>
+                            general inquiries and new business
+                        </StyledHeader>
                         <Link href="mailto: hello@backroom.io">
                             hello@backroom.io
-                        </Link>
-                    </div>
-                    <div>
-                        <StyledHeader>new business</StyledHeader>
-                        <Link href="mailto: sales@backroom.io">
-                            sales@backroom.io
                         </Link>
                     </div>
                 </StyledGrid>

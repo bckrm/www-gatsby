@@ -6,7 +6,7 @@ import tw from 'twin.macro';
 import { CgArrowLongRight as Icon } from 'react-icons/cg';
 
 const StyledSection = styled.section`
-    ${tw`container pb-40`}
+    ${tw`container pb-40 pt-28`}
 `;
 const StyledGrid = styled.div`
     ${tw`flex justify-between flex-col md:flex-row flex-wrap`}
@@ -32,7 +32,7 @@ export default function Contact() {
                     to="/contact"
                 >
                     Contact Us
-                    <Icon />
+                    <Icon className="text-brand-7" />
                 </Link>
             </StyledGrid>
         </StyledSection>

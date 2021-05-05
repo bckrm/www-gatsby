@@ -4,18 +4,20 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import IndexPressItem from './IndexPressItem';
+import SandOval from './svgs/sandOval';
 
 const Section = styled.section`
-    ${tw``}
+    ${tw`relative`}
 `;
 
 const Grid = styled.div`
-    ${tw`container grid md:grid-cols-3 py-32`}
+    ${tw`container grid md:grid-cols-3 py-32 relative`}
 `;
 
 export default function IndexPressSection() {
     return (
         <Section>
+            <SandOval />
             <Grid>
                 {data.map((item) => (
                     <IndexPressItem data={item} />

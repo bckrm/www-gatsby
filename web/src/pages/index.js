@@ -5,22 +5,32 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import Contact from '../components/Contact';
+import IndexTextAnimation from '../components/indexTextAnimation';
 import IndexCTA from '../components/IndexCTA';
 import IndexHero from '../components/IndexHero';
 import IndexFeatureSection from '../components/IndexFeatureSection';
 import IndexPressSection from '../components/IndexPressSection';
 
 export default function Index({ data }) {
-    const { barcoding, designTeam, featureImage, image3, tempRendia } = data;
+    const {
+        barcoding,
+        chylene,
+        // designTeam,
+        // featureImage,
+        dcu,
+        leslie,
+        volo,
+    } = data;
 
-    const images = [barcoding, tempRendia, image3];
+    const images = [barcoding, volo, dcu];
 
     return (
         <Layout hasFooter hasBgColorTransition>
             <SEO title="Home" />
             <IndexHero images={images} />
+            <IndexTextAnimation />
             <IndexCTA />
-            <IndexFeatureSection images={[designTeam, featureImage]} />
+            <IndexFeatureSection images={[leslie, chylene]} />
             <IndexPressSection />
             <Contact />
         </Layout>
@@ -29,6 +39,22 @@ export default function Index({ data }) {
 
 export const query = graphql`
     query IndexQuery {
+        chylene: file(relativePath: { regex: "/chylene/" }) {
+            childImageSharp {
+                fluid(maxWidth: 2000) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+
+        leslie: file(relativePath: { regex: "/leslie/" }) {
+            childImageSharp {
+                fluid(maxWidth: 2000) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+
         featureImage: file(relativePath: { regex: "/kara/" }) {
             childImageSharp {
                 fluid(maxWidth: 450) {
@@ -47,7 +73,7 @@ export const query = graphql`
             id
         }
 
-        tempRendia: file(relativePath: { regex: "/glasses/" }) {
+        volo: file(relativePath: { regex: "/volo-hero/" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid
@@ -56,7 +82,7 @@ export const query = graphql`
             id
         }
 
-        image3: file(relativePath: { eq: "dcu-mobile-and-tiles.png" }) {
+        dcu: file(relativePath: { regex: "/dcu-index/" }) {
             childImageSharp {
                 fluid(maxWidth: 600) {
                     ...GatsbyImageSharpFluid

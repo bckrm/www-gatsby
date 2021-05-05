@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+/* eslint-disable no-nested-ternary */
+import React, { useEffect, useState } from 'react';
 // import { useState } from 'react'
 import { Link } from 'gatsby';
 // import { motion } from 'framer-motion';
@@ -13,8 +14,15 @@ import MarkAbbr from './svgs/mark-abbr';
 const StyledNav = styled.nav`
     ${tw`fixed py-4 md:py-8 top-0 w-full z-10`}
 
-    background-color: ${({ isCaseStudy }) =>
-        isCaseStudy ? 'var(--white)' : 'var(--brand-2)'}
+    background-color: ${({ isCaseStudy, isPageScrolled }) =>
+        isCaseStudy && isPageScrolled
+            ? 'var(--white)'
+            : isCaseStudy && !isPageScrolled
+            ? 'transparent'
+            : isPageScrolled
+            ? 'var(--brand-1)'
+            : 'transparent'};
+    transition: background-color 500ms ease;
 `;
 
 const DesktopMarkWrapper = styled.div`
@@ -34,7 +42,25 @@ const StyledLink = styled(Link)`
 `;
 
 export default function NewNav({ isCaseStudy }) {
-    // const [navOpen, setNavOpen] = useState(false)
+    const [isPageScrolled, setIsPageScrolled] = useState(false);
+
+    const handleScroll = () => {
+        const yPos = window.scrollY;
+
+        if (yPos > 0) {
+            setIsPageScrolled(true);
+        } else {
+            setIsPageScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
 
     const menu = [
         {
@@ -72,7 +98,7 @@ export default function NewNav({ isCaseStudy }) {
     // const handleClick = () => setNavOpen(!navOpen)
 
     return (
-        <StyledNav isCaseStudy={isCaseStudy}>
+        <StyledNav isCaseStudy={isCaseStudy} isPageScrolled={isPageScrolled}>
             <NavInner>
                 <Link to="/">
                     <DesktopMarkWrapper>
