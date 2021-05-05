@@ -48,8 +48,7 @@ const Span = styled.span`
     }
 `;
 
-export default function NewHamburger({ handleClick, navOpen }) {
-    console.log(navOpen);
+export default function NewHamburger({ handleClick }) {
     return (
         <Wrapper onClick={handleClick}>
             <Span navActive="true" />

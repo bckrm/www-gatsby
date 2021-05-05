@@ -33,9 +33,8 @@ const Main = styled.main`
             : !hasBgColorTransition
             ? 'var(--brand-2)'
             : isBgTransitioned
-            ? 'var(--brand-1)'
-            : 'var(--brand-2)'};
-    padding-top: ${({ hasTopPadding }) => (hasTopPadding ? '148px' : '0px')};
+            ? 'var(--white)'
+            : 'var(--brand-1)'}
 `;
 export default function Layout({
     hasBgColorTransition,

@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { CgArrowLongRight as Icon } from 'react-icons/cg';
+import NoNameOval from './svgs/noname-oval';
 
 const StyledSection = styled.section`
-    ${tw`h-3/4`}
+    ${tw`h-3/4 py-28 relative`}
 `;
 
 const Container = styled.div`
-    ${tw`container flex flex-col justify-center py-40`}
+    ${tw`container flex flex-col justify-center py-40 relative`}
 `;
 
 const StyledHeading = styled.h2`
@@ -24,6 +25,7 @@ const StyledLink = styled(Link)`
 export default function IndexCTA() {
     return (
         <StyledSection>
+            <NoNameOval />
             <Container>
                 <StyledHeading>
                     We’ve built and evolved brands from local startups to global
@@ -31,7 +33,7 @@ export default function IndexCTA() {
                 </StyledHeading>
                 <StyledLink to="/contact">
                     Work with us
-                    <Icon className="ml-5" />
+                    <Icon className="l-5 text-brand-7" />
                 </StyledLink>
             </Container>
         </StyledSection>
