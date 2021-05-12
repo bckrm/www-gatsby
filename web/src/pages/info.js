@@ -77,7 +77,7 @@ export default function InfoPage(props) {
 
 const content = {
     heroSection: {
-        heading: `Get the best, not the most. Doing great work means honest collaboration, heart wrenching passion, and a Type-A obsession with efficiency. `,
+        heading: `We build pacesetting brands with heart-wrenching passion, mutual respect, and a Type-A obsession with efficiency.`,
     },
     serviceSection: {
         heading: 'our services',
