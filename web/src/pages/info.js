@@ -14,6 +14,28 @@ import TeamSection from '../components/TeamSection';
 // import TestimonialSection from '../components/TestimonialSection';
 
 export const query = graphql`
+    fragment SanityImage on SanityImage {
+        crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+        }
+        hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+        }
+        asset {
+            _id
+        }
+    }
+
     query InfoQuery {
         heroImage: file(relativePath: { regex: "/info-hero/" }) {
             childImageSharp {
@@ -28,11 +50,7 @@ export const query = graphql`
                 name
                 title
                 image {
-                    asset {
-                        fluid(maxWidth: 350) {
-                            ...GatsbySanityImageFluid
-                        }
-                    }
+                    ...SanityImage
                 }
             }
             services {
