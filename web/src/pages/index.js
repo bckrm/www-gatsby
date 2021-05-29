@@ -14,7 +14,7 @@ import IndexPressSection from '../components/IndexPressSection';
 export default function Index({ data }) {
     const {
         barcoding,
-        chylene,
+        karaHP,
         // designTeam,
         // featureImage,
         dcu,
@@ -30,7 +30,7 @@ export default function Index({ data }) {
             <IndexHero images={images} />
             <IndexTextAnimation />
             <IndexCTA />
-            <IndexFeatureSection images={[leslie, chylene]} />
+            <IndexFeatureSection images={[leslie, karaHP]} />
             <IndexPressSection />
             <Contact />
         </Layout>
@@ -39,7 +39,7 @@ export default function Index({ data }) {
 
 export const query = graphql`
     query IndexQuery {
-        chylene: file(relativePath: { regex: "/chylene/" }) {
+        karaHP: file(relativePath: { regex: "/Kara-Home-Page/" }) {
             childImageSharp {
                 fluid(maxWidth: 2000) {
                     ...GatsbyImageSharpFluid
