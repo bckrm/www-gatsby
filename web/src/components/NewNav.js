@@ -113,7 +113,7 @@ export default function NewNav({ isCaseStudy }) {
                         return (
                             <StyledLink
                                 activeClassName="font-bold pointer-events-none"
-                                to={item.link}
+                                to={`/${item.link}`}
                                 key={item.name}
                             >
                                 {item.name}
