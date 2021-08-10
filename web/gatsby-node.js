@@ -33,6 +33,8 @@ exports.createPages = async ({ graphql, actions }) => {
     caseStudies.forEach((edge) => {
         const path = `/work/${edge.node.slug.current}`;
 
+        console.log(edge);
+        console.log(edge.node.slug.current);
         createPage({
             path,
             component: require.resolve('./src/templates/case-study.js'),
