@@ -32,11 +32,11 @@ export default {
                     type: 'reference',
                     to: [
                         {
-                            type: 'service'
+                            type: 'service',
                         },
                     ],
                 },
-            ]
-        }
+            ],
+        },
     ],
-}
+};
