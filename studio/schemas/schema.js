@@ -11,6 +11,7 @@ import caseStudyPreview from './documents/caseStudyPreview';
 import homepagehero from './documents/homepageHero';
 import indexPage from './documents/indexPage';
 import infoPage from './documents/infoPage';
+import landingPage from './documents/landingPage';
 import post from './documents/post';
 import service from './documents/service';
 import team from './documents/team';
@@ -28,6 +29,12 @@ import fullWidthVideo from './objects/case-study/fullWidthVideo';
 import imageCol2 from './objects/case-study/imageCol2';
 import imageGridTallLeft from './objects/case-study/imageGridTallLeft';
 import imageObj from './objects/image';
+import logo from './objects/logo';
+import lpClients from './objects/landingPage/clients';
+import lpFeatures from './objects/landingPage/features';
+import lpForm from './objects/landingPage/form';
+import lpHero from './objects/landingPage/hero';
+import quote from './objects/quote';
 import twoColLargeRightImage from './objects/case-study/2colLgRightImage';
 import twoColWithVideo from './objects/case-study/2colWithVideo';
 import video from './objects/case-study/video';
@@ -49,6 +56,7 @@ export default createSchema({
         homepagehero,
         indexPage,
         infoPage,
+        landingPage,
         post,
         service,
         team,
@@ -62,6 +70,12 @@ export default createSchema({
         imageCol2,
         imageGridTallLeft,
         imageObj,
+        logo,
+        lpClients,
+        lpFeatures,
+        lpForm,
+        lpHero,
+        quote,
         twoColLargeRightImage,
         twoColWithVideo,
         video,

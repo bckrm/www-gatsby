@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-exports.createPages = async ({ graphql, actions }) => {
+async function createCaseStudyPages(graphql, actions) {
     const { createPage } = actions;
 
     const result = await graphql(`
@@ -42,4 +42,47 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
+}
+
+async function createLandingPages(graphql, actions) {
+    const { createPage } = actions;
+
+    const result = await graphql(`
+        {
+            allSanityLandingPage {
+                edges {
+                    node {
+                        slug {
+                            current
+                        }
+                        id
+                    }
+                }
+            }
+        }
+    `);
+
+    if (result.errors) {
+        throw result.errors;
+    }
+
+    const pages = result.data.allSanityLandingPage.edges || [];
+
+    pages.forEach((edge) => {
+        const path = `/${edge.node.slug.current}`;
+
+        createPage({
+            path,
+            component: require.resolve('./src/templates/landing-page.js'),
+            context: {
+                slug: edge.node.slug.current,
+                id: edge.node.id,
+            },
+        });
+    });
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+    await createCaseStudyPages(graphql, actions);
+    await createLandingPages(graphql, actions);
 };

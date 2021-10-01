@@ -2,28 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../fonts/fonts.css";
+@import '../fonts/fonts.css';
 
 :root {
-    --brGreen: #2E444F;
-    --brGrey: #4E5859;
+    --brGreen: #2e444f;
+    --brGrey: #4e5859;
     --white: #ffffff;
     --black: #000000;
-    --brand-1: #FBF7E9;
-    --brand-2: #E9DDC9;
-    --brand-3: #E2B394;
-    --brand-4: #B5734D;
-    --brand-5: #7C4121;
-    --brand-6: #F7A037;
-    --brand-7: #EA4E25;
-    --brand-8: #FFD4CB;
-    --brand-9: #1F2A48;
+    --brand-1: #fbf7e9;
+    --brand-2: #e9ddc9;
+    --brand-3: #e2b394;
+    --brand-4: #b5734d;
+    --brand-5: #7c4121;
+    --brand-6: #f7a037;
+    --brand-7: #ea4e25;
+    --brand-8: #ffd4cb;
+    --brand-9: #1f2a48;
 }
 
 body {
-    font-family: "Galano Grotesque";
+    font-family: 'Galano Grotesque';
     color: var(--brand-9);
-    font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     font-kerning: normal;
     font-size: 1rem;
     font-weight: 400;
@@ -31,8 +31,13 @@ body {
     word-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Quincy CF";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quincy CF';
 }
 
 h1 {
@@ -42,15 +47,12 @@ h1 {
 }
 
 h2,
-.h2
-h3,
-.h3
-h4,
+.h2 h3,
+.h3 h4,
 .h4 {
     font-weight: 600;
     line-height: 1.25;
 }
-
 
 h2,
 .h2 {
@@ -71,6 +73,17 @@ a {
     text-decoration: none;
 }
 
-caption, .caption {
+caption,
+.caption {
     line-height: 1.5;
+}
+
+.prose h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.prose h4 {
+    font-size: 1.75rem;
+    font-weight: 400;
 }
