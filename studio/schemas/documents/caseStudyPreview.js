@@ -22,6 +22,7 @@ export default {
             name: 'backgroundColor',
             title: 'Background Color',
             type: 'string',
+            description: `#FBF7E9 is the brand's 'cream' color`,
         },
         {
             name: 'caseStudy',
@@ -31,4 +32,11 @@ export default {
             validation: (Rule) => Rule.required(),
         },
     ],
+    preview: {
+        select: {
+            media: 'image',
+            subtitle: 'description',
+            title: 'name',
+        },
+    },
 };

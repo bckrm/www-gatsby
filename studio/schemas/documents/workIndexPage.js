@@ -19,11 +19,26 @@ export default {
             title: 'Hero',
             type: 'text',
         },
+        // {
+        //     name: 'team',
+        //     title: 'Team',
+        //     type: 'array',
+        //     of: [
+        //         {
+        //             type: 'reference',
+        //             to: [
+        //                 {
+        //                     type: 'team',
+        //                 },
+        //             ],
+        //         },
+        //     ],
+        // },
         {
             name: 'previewTiles',
             title: 'Preview Tiles',
             type: 'array',
-            of: [{ type: 'block', of: [{ type: 'caseStudyPreview' }] }],
+            of: [{ type: 'reference', to: [{ type: 'caseStudyPreview' }] }],
         },
     ],
 };
