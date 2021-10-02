@@ -12,22 +12,18 @@ export const query = graphql`
     query WorkQuery {
         sanityWorkIndexPage {
             hero
-        }
-        allSanityCaseStudyPreview {
-            edges {
-                node {
-                    backgroundColor
-                    id
-                    image {
-                        asset {
-                            url
-                        }
+            previewTiles {
+                backgroundColor
+                caseStudy {
+                    slug {
+                        current
                     }
-                    description
-                    caseStudy {
-                        slug {
-                            current
-                        }
+                }
+                description
+                id
+                image {
+                    asset {
+                        url
                     }
                 }
             }
@@ -37,8 +33,7 @@ export const query = graphql`
 
 export default function Work({ data }) {
     const {
-        sanityWorkIndexPage: { hero },
-        allSanityCaseStudyPreview: { edges },
+        sanityWorkIndexPage: { hero, previewTiles },
     } = data;
 
     const breakpointColumnsObj = {
@@ -58,7 +53,7 @@ export default function Work({ data }) {
                     className="my-masonry-grid flex"
                     columnClassName="my-masonry-grid_column"
                 >
-                    {edges.map(item => {
+                    {previewTiles.map((item) => {
                         return <PreviewTile data={item} />;
                     })}
                 </Masonry>

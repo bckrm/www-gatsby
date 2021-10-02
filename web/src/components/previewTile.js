@@ -1,29 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import Img from 'gatsby-image'
-
 import { Link } from 'gatsby';
 
 export default function PreviewTile({ data }) {
-    const { node } = data;
-    const style = { backgroundColor: node.backgroundColor };
+    const style = { backgroundColor: data.backgroundColor };
+
     return (
+        // <h1>testing</h1>
         <Link
             className="block m-4"
             style={style}
-            to={`/work/${node.caseStudy[0].slug.current}`}
-            key={node.id}
+            to={`/work/${data.caseStudy[0].slug.current}`}
+            key={data.id}
         >
-            {node.image && (
+            {data.image && (
                 <img
                     className="w-full"
-                    src={`${node.image.asset.url}`}
+                    src={`${data.image.asset.url}`}
                     alt=""
                 />
             )}
-            {node.description && (
-                <p className="p-8 text-5xl leading-tight">{node.description}</p>
+            {data.description && (
+                <p className="p-8 text-5xl leading-tight">{data.description}</p>
             )}
         </Link>
     );
