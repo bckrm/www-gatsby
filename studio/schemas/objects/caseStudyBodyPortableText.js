@@ -72,14 +72,14 @@ export default {
         {
             type: 'caseStudyFeaturedImage',
         },
-        {
-            type: 'caseStudyFullBleedImage',
-        },
+        // {
+        //     type: 'caseStudyFullBleedImage',
+        // },
         {
             type: 'caseStudyTextBlock',
         },
         {
-            type: 'video',
+            type: 'fullWidthVideo',
         },
     ],
     description:

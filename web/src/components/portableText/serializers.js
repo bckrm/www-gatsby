@@ -4,6 +4,7 @@ import CaseStudyContent from '../case-studies/CaseStudyContent';
 import Description from '../case-studies/description';
 import FullBleedImg from '../case-studies/FullBleedImg';
 import FullWidthImage from '../case-studies/fullWidthImage';
+import FullWidthVideo from '../case-studies/fullWidthVideo';
 import ImageCol2 from '../case-studies/imageCol2';
 import ImageGridTallImageLeft from '../case-studies/imageGridTallImageLeft';
 import TwoColWithVideo from '../case-studies/2colWithVideo';
@@ -18,6 +19,7 @@ export default {
         caseStudyTextBlock: CaseStudyContent,
         description: Description,
         fullWidthImage: FullWidthImage,
+        fullWidthVideo: FullWidthVideo,
         imageCol2: ImageCol2,
         imageGridTallLeft: ImageGridTallImageLeft,
         twoColLargeRightImage: TwoColumnLargeImageRight,
