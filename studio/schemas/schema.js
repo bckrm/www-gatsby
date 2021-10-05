@@ -24,6 +24,7 @@ import caseStudyTextBlock from './objects/caseStudyTextBlock';
 import description from './objects/case-study/description';
 import featuredContent from './objects/case-study/featuredContent';
 import fullWidthImage from './objects/case-study/fullWidthImage';
+import fullWidthVideo from './objects/case-study/fullWidthVideo';
 import imageCol2 from './objects/case-study/imageCol2';
 import imageGridTallLeft from './objects/case-study/imageGridTallLeft';
 import imageObj from './objects/image';
@@ -57,6 +58,7 @@ export default createSchema({
         description,
         featuredContent,
         fullWidthImage,
+        fullWidthVideo,
         imageCol2,
         imageGridTallLeft,
         imageObj,

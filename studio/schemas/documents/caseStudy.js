@@ -15,6 +15,7 @@ export default {
             options: {
                 source: 'title',
             },
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'featuredContent',
