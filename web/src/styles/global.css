@@ -20,6 +20,29 @@
     --brand-9: #1f2a48;
 }
 
+.body-font {
+    font-family: 'Galano Grotesque';
+}
+
+.display-font {
+    font-family: 'Quincy CF';
+}
+
+.quote-accent {
+    position: relative;
+}
+
+.quote-accent:after {
+    background-color: var(--brand-7);
+    bottom: 0;
+    content: '';
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    transform: translateY(-1.5rem);
+    width: 2rem;
+}
+
 body {
     font-family: 'Galano Grotesque';
     color: var(--brand-9);

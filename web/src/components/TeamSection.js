@@ -8,7 +8,7 @@ import TeamMember from './TeamMember';
 const StyledSection = styled.section`
     ${tw`container w-11/12 md:w-full`}
 
-    margin-bottom: 17.25rem;
+    margin-bottom: 7.25rem;
 `;
 
 const StyledHeading = styled.h2`

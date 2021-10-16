@@ -33,11 +33,14 @@ export default {
             type: 'string',
         },
         {
-            name: 'formFields',
-            title: 'Form Fields',
+            name: 'clients',
+            title: 'Client Section',
+            type: 'lpClients',
+        },
+        {
+            name: 'featuresHeading',
+            title: 'Features Heading',
             type: 'string',
-            description:
-                'Comma separated list of form fields names (First Name, LastName, Email address)',
         },
         {
             name: 'features',
@@ -50,19 +53,14 @@ export default {
             ],
         },
         {
-            name: 'clients',
-            title: 'Client Section',
-            type: 'lpClients',
+            name: 'quote',
+            title: 'Quote',
+            type: 'quote',
         },
         {
-            name: 'quotes',
-            title: 'Quotes',
-            type: 'array',
-            of: [
-                {
-                    type: 'quote',
-                },
-            ],
+            name: 'featuredCaseStudy',
+            title: 'Featured Case Study',
+            type: 'featuredCaseStudy',
         },
         {
             name: 'teamSectionBool',
@@ -78,7 +76,29 @@ export default {
             hidden: ({ document }) => !document?.teamSectionBool,
             name: 'teamSectionHeading',
             title: 'Team Section Heading',
-            type: 'text',
+            type: 'string',
+        },
+        {
+            hidden: ({ document }) => !document?.teamSectionBool,
+            // hidden: false,
+            name: 'team',
+            title: 'Team',
+            type: 'array',
+            of: [
+                {
+                    type: 'reference',
+                    to: [
+                        {
+                            type: 'team',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
         },
     ],
 };

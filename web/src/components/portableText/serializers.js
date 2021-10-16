@@ -1,7 +1,8 @@
-// import React from 'react'
+/* eslint-disable import/no-cycle */
 import BasicImage from '../case-studies/BasicImage';
 import CaseStudyContent from '../case-studies/CaseStudyContent';
 import Description from '../case-studies/description';
+import FeatureItem from '../lps/featureItem';
 import FullBleedImg from '../case-studies/FullBleedImg';
 import FullWidthImage from '../case-studies/fullWidthImage';
 import FullWidthVideo from '../case-studies/fullWidthVideo';
@@ -22,6 +23,7 @@ export default {
         fullWidthVideo: FullWidthVideo,
         imageCol2: ImageCol2,
         imageGridTallLeft: ImageGridTallImageLeft,
+        lpFeatures: FeatureItem,
         twoColLargeRightImage: TwoColumnLargeImageRight,
         twoColWithVideo: TwoColWithVideo,
         video: Video,

@@ -24,6 +24,7 @@ import caseStudyFeaturedImage from './objects/caseStudyFeaturedImage';
 import caseStudyTextBlock from './objects/caseStudyTextBlock';
 import description from './objects/case-study/description';
 import featuredContent from './objects/case-study/featuredContent';
+import featuredCaseStudy from './objects/landingPage/featuredCaseStudy';
 import fullWidthImage from './objects/case-study/fullWidthImage';
 import fullWidthVideo from './objects/case-study/fullWidthVideo';
 import imageCol2 from './objects/case-study/imageCol2';
@@ -35,6 +36,7 @@ import lpFeatures from './objects/landingPage/features';
 import lpForm from './objects/landingPage/form';
 import lpHero from './objects/landingPage/hero';
 import quote from './objects/quote';
+import seo from './objects/seo';
 import twoColLargeRightImage from './objects/case-study/2colLgRightImage';
 import twoColWithVideo from './objects/case-study/2colWithVideo';
 import video from './objects/case-study/video';
@@ -65,6 +67,7 @@ export default createSchema({
         // objects
         description,
         featuredContent,
+        featuredCaseStudy,
         fullWidthImage,
         fullWidthVideo,
         imageCol2,
@@ -76,6 +79,7 @@ export default createSchema({
         lpForm,
         lpHero,
         quote,
+        seo,
         twoColLargeRightImage,
         twoColWithVideo,
         video,

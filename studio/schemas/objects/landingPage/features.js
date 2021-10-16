@@ -9,11 +9,6 @@ export default {
             type: 'string',
         },
         {
-            name: 'image',
-            title: 'Image',
-            type: 'imageObj',
-        },
-        {
             name: 'description',
             title: 'Description',
             type: 'array',
@@ -39,7 +34,6 @@ export default {
     preview: {
         select: {
             title: 'title',
-            media: 'image',
         },
     },
 };
