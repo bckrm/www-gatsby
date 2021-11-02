@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
     purge: ['./src/**/*.js', './src/**/*.jsx'],
     darkMode: false, // or 'media' or 'class'
@@ -17,6 +18,15 @@ module.exports = {
             gridTemplateRows: {
                 10: 'repeat(10, minmax(0, 1fr))',
             },
+            typography: {
+                default: {
+                    css: {
+                        h2: {
+                            fontSize: '2.5rem',
+                        },
+                    },
+                },
+            },
         },
         container: (theme) => ({
             center: true,
@@ -24,5 +34,5 @@ module.exports = {
         }),
     },
     variants: {},
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };

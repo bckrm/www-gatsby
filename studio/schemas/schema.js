@@ -11,6 +11,7 @@ import caseStudyPreview from './documents/caseStudyPreview';
 import homepagehero from './documents/homepageHero';
 import indexPage from './documents/indexPage';
 import infoPage from './documents/infoPage';
+import landingPage from './documents/landingPage';
 import post from './documents/post';
 import service from './documents/service';
 import team from './documents/team';
@@ -23,11 +24,19 @@ import caseStudyFeaturedImage from './objects/caseStudyFeaturedImage';
 import caseStudyTextBlock from './objects/caseStudyTextBlock';
 import description from './objects/case-study/description';
 import featuredContent from './objects/case-study/featuredContent';
+import featuredCaseStudy from './objects/landingPage/featuredCaseStudy';
 import fullWidthImage from './objects/case-study/fullWidthImage';
 import fullWidthVideo from './objects/case-study/fullWidthVideo';
 import imageCol2 from './objects/case-study/imageCol2';
 import imageGridTallLeft from './objects/case-study/imageGridTallLeft';
 import imageObj from './objects/image';
+import logo from './objects/logo';
+import lpClients from './objects/landingPage/clients';
+import lpFeatures from './objects/landingPage/features';
+import lpForm from './objects/landingPage/form';
+import lpHero from './objects/landingPage/hero';
+import quote from './objects/quote';
+import seo from './objects/seo';
 import twoColLargeRightImage from './objects/case-study/2colLgRightImage';
 import twoColWithVideo from './objects/case-study/2colWithVideo';
 import video from './objects/case-study/video';
@@ -49,6 +58,7 @@ export default createSchema({
         homepagehero,
         indexPage,
         infoPage,
+        landingPage,
         post,
         service,
         team,
@@ -57,11 +67,19 @@ export default createSchema({
         // objects
         description,
         featuredContent,
+        featuredCaseStudy,
         fullWidthImage,
         fullWidthVideo,
         imageCol2,
         imageGridTallLeft,
         imageObj,
+        logo,
+        lpClients,
+        lpFeatures,
+        lpForm,
+        lpHero,
+        quote,
+        seo,
         twoColLargeRightImage,
         twoColWithVideo,
         video,

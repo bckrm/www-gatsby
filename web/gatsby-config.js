@@ -101,6 +101,14 @@ module.exports = {
                 path: `${__dirname}/src/fonts`,
             },
         },
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint:
+                    'https://backroom.us8.list-manage.com/subscribe/post?u=02b89664ea74dc2e8f17af61a&id=5cfee982ef',
+                timeout: 3500,
+            },
+        },
         // {
         //   resolve: "gatsby-plugin-web-font-loader",
         //   options: {

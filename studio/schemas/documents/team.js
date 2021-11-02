@@ -1,17 +1,17 @@
-import { MdPerson as icon } from 'react-icons'
+import { MdPerson as icon } from 'react-icons';
 
 export default {
     icon,
     name: 'team',
     type: 'document',
-    title: 'Team', 
+    title: 'Team',
     fields: [
         {
             name: 'name',
             title: 'Name',
             type: 'string',
         },
-        { 
+        {
             name: 'slug',
             title: 'slug',
             type: 'slug',
@@ -39,4 +39,10 @@ export default {
             },
         },
     ],
-}
+    preview: {
+        select: {
+            title: 'name',
+            media: 'image',
+        },
+    },
+};
