@@ -62,7 +62,7 @@ export default function IndexFeatureSection({ images }) {
                         people and its culture.”
                     </Quote>
                     <Link
-                        href="https://technical.ly/baltimore/2019/08/15/5-questions-with-kara-redman-how-a-creative-agency-thrives-on-its-own-terms/"
+                        href="https://technical.ly/startups/5-questions-with-kara-redman-how-a-creative-agency-thrives-on-its-own-terms/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
